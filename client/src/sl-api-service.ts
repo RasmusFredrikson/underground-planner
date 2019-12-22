@@ -5,6 +5,13 @@ export enum SiteId {
 class SlApiService {
     private readonly _realtidApiKey = "4d2534968afe446eba10b8415adf0599";
 
+    public async helloWorld() {
+        const response = await fetch("/api/hello");
+        const body = await response.json();
+        if (response.status !== 200) throw Error(body.message);
+        console.error(body);
+    }
+
     /**
      * fetchRealTimeData
      * @param siteId
