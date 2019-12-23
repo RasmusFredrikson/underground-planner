@@ -6,7 +6,11 @@ export const Overview = () => {
 
     return (
         <span>
-            <button onClick={async () => slApi.helloWorld()}>Hej</button>
+            <button
+                onClick={async () => slApi.fetchRealTimeData(SiteId.Slussen)}
+            >
+                Hej
+            </button>
             {`Overview`}
         </span>
     );
